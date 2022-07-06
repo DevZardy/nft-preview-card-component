@@ -1,0 +1,139 @@
+/* Importing fonts from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* Setting variables for easy recall */
+:root{
+    /* Primary colours */
+    --softblue: hsl(215, 51%, 70%);
+    --cyan: cyan;
+    
+    /* Neutral colours */
+    --main-bg-color: hsl(217, 54%, 11%);
+    --card-bg-color: hsl(216, 50%, 16%);
+    --divider-line-color: hsl(215, 32%, 27%);
+
+    /* Font */
+    --main-font: Outfit, sans-serif;
+
+    /* Font weights */
+    --bold-w: 600;
+    --medium-w: 400;
+    --light-w: 300;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    font-size: 62.5%; /* for easy conversion from  px to rem */
+    background-color: var(--main-bg-color);
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container{
+    width: 28rem;
+    height: 45rem;
+    background-color: var(--card-bg-color);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem;
+    border-radius: 1rem;
+}
+
+.nft-img{
+    background-image: url(./images/image-equilibrium.jpg);
+    background-size: cover;
+    height:60%;
+    border-radius: 1rem;
+}
+
+.nft-name{
+    font-family: var(--main-font);
+    font-weight: var(--medium-w);
+    color: white;
+    font-size: 1.8rem;
+}
+
+.nft-about{
+    font-size: 1.2rem;
+    font-family: var(--main-font);
+    color: var(--softblue);
+    font-weight: var(--light-w);
+}
+
+.nft-sale-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+/* Pseudo selector selects first <p> element */
+.nft-sale-info p:first-child{
+    color: var(--cyan);
+    font-family: var(--main-font);
+    font-weight: var(--bold-w);
+    font-size: 1.2rem;
+    display: inline-flex;
+    gap: 0.6rem;
+}
+
+/* Pseudo selector selects last <p> element */
+.nft-sale-info p:last-child{
+    color: var(--softblue);
+    font-family: var(--main-font);
+    font-size: 1.2rem;
+    display: inline-flex;
+    gap: 0.6rem;
+}
+
+
+hr{
+    background-color: var(--divider-line-color);
+    height: 0.1rem;
+    border: none;
+    margin-bottom:2rem;
+}
+
+.nft-creator-info{
+    display:inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+
+
+/* Pseudo selector selects first <p> element */
+.nft-creator-info p:first-child {
+    font-family: var(--main-font);
+    font-weight: var(--light-w);
+    font-size: 1.2rem;
+    color: var(--softblue);
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Selects image within first <p> element */
+.nft-creator-info p:first-child img {
+    max-width: 3rem;
+    border: 0.1rem solid white;
+    border-radius: 2rem;
+    align-self: flex-start;
+}
+
+/* Selects last <p> element */
+.nft-creator-info p:last-child {
+    font-family: var(--main-font);
+    font-weight: var(--light-w);
+    font-size: 1.2rem;
+    color: white;
+}
